@@ -9,7 +9,7 @@ and then increment both pointers as follows [0,1,1,1,1,2,2,3,3,4]
                                                u   i
 Again comparing and checking the elements we get following array [0,1,2,3,4,2,2,3,3,4]
 And then to return number of unique elements we return u+1 because thats where the array will be having all unique elements. */
-
+//Leetcode-26(Remove Duplicates from array)
 class RemoveDuplicatesFromArray{
   public int removeDuplicates(int [0,0,1,1,1,2,2,3,3,4] nums){
     int lastUniqueIndex=0;
