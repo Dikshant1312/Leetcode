@@ -22,7 +22,8 @@ end--;
 }
 }
 }
-
+/* 
+This is main method just to check the given main method
 class RotateArray{
 public static void main(String [] args){
 Solution s = new Solution();
@@ -37,3 +38,4 @@ s.rotate(nums,k);
 System.out.println("After Rotation : "+Arrays.toString(nums));
 }
 }
+*/
