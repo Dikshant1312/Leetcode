@@ -1,30 +1,27 @@
-//Leetcode-1(Two Sum)
-1. Two Sum
-
-
-//Optimal solution using HashMap
-
- public int[] twoSum(int[] nums, int target) {
-              
-        HashMap<Integer,Integer> map  = new HashMap();
-        
-        //Fill HM
-        for(int i=0;i<nums.length;i++){
-            map.put(nums[i],i);
-        }
-            
-            
-        //Searching
-         for(int i=0;i<nums.length;i++){ //2 7 11 15  target = 4
-            int num = nums[i]; 
-            int rem = target - num; 
-            if(map.containsKey(rem)){
-                int index = map.get(rem);
-                if(index==i)continue;
-                return new int[]{i,index}; 
-            }  
-        }
-        
-        return new int[]{};
-        
-    }
+//Leetcode - 1(TwoSum)
+import java.util.Hashtable;
+import java.util.Arrays;
+class Solution{
+public int[] twoSum(int [] nums, int target){
+Hashtable<Integer,Integer> numbersFound= new Hashtable<>();
+for(int i = 0 ; i < nums.length; i++){
+if(numbersFound.containsKey(target - nums[i])){
+return new int[]{numbersFound.get(target - nums[i]) , i};
+}
+numbersFound.put(nums[i],i);
+}
+return null;
+} 
+}
+/*
+This is main method to check the given array
+class TwoSum{
+public static void main(String [] args){
+Solution s = new Solution();
+int [] nums = {4, 7, 2, 6};
+int target = 9;
+int [] A = s.twoSum(nums,target);
+System.out.println("Output"+ Arrays.toString(A));
+}
+}
+*/
